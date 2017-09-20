@@ -62,7 +62,7 @@ class controller(object):
         self.channel_bank using the same keys provided by full_list."""
         for chan_num, frequencies in self.chan_list.iteritems():
             channel = uhf_channel.channel(chan_num, frequencies, self.options)
-            self.channel_bank[chan_num] = channel
+            self.channel_bank[chan_num] = channel   # status is initialize by "UNKNOWN"
             
     def __initialscan(self):
         """PRIVATE METHOD: runs initial scan of all instances channels and
